@@ -22,15 +22,10 @@ const displayPhones = phones => {
         `;
         searchResult.appendChild(div);
     }
-    for (let phone = 1; phone <= phoneLength; phone++) {
-        if (phone > 20) {
-            break;
-        }
-
-    }
-    phones.forEach(phone => {
-        console.log(phones.length)
-        if (phones.length < 20) {
+    const twentyPhones = phones.slice(0,20);
+    
+    twentyPhones.forEach(phone => {
+        console.log(twentyPhones.length)
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
@@ -45,8 +40,8 @@ const displayPhones = phones => {
         `;
             searchResult.appendChild(div);
         }
-
-    });
+    )
+    
 
 }
 
